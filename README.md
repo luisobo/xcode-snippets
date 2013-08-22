@@ -6,4 +6,4 @@
 1. Run the install command: `./script/install`
 1. Restart Xcode
 
-
+### [Checkout the snippet catalog](catalog.md)
