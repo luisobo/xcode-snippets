@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require "plist"
+
+Dir.foreach('snippets') do |item|
+  next if item == '.' or item == '..'
+  
+  snippet = Plist::parse_xml(File.read("snippets/#{item}"))
+
+  puts "##### #{snippet["IDECodeSnippetTitle"]}"
+  puts "Prefix: `#{snippet["IDECodeSnippetCompletionPrefix"]}`"
+  puts """```objc
+#{snippet["IDECodeSnippetContents"]}
+```
+"""
+  puts ""
+end
+
+  
