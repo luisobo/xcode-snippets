@@ -2,13 +2,18 @@
 
 require "plist"
 
-result = ""
-
+snippets = []
 Dir.foreach('snippets') do |item|
   next if item == '.' or item == '..'
   
-  snippet = Plist::parse_xml(File.read("snippets/#{item}"))
+  snippets << Plist::parse_xml(File.read("snippets/#{item}"))
+end
 
+snippets.sort! { |x, y| x["IDECodeSnippetTitle"] <=> y["IDECodeSnippetTitle"] }
+
+result = ""
+
+snippets.each do |snippet|
   result << "##### #{snippet["IDECodeSnippetTitle"]}\n"
   result << "Prefix: `#{snippet["IDECodeSnippetCompletionPrefix"]}`\n"
   result << """```objc
