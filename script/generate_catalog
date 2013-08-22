@@ -2,18 +2,22 @@
 
 require "plist"
 
+result = ""
+
 Dir.foreach('snippets') do |item|
   next if item == '.' or item == '..'
   
   snippet = Plist::parse_xml(File.read("snippets/#{item}"))
 
-  puts "##### #{snippet["IDECodeSnippetTitle"]}"
-  puts "Prefix: `#{snippet["IDECodeSnippetCompletionPrefix"]}`"
-  puts """```objc
+  result << "##### #{snippet["IDECodeSnippetTitle"]}\n"
+  result << "Prefix: `#{snippet["IDECodeSnippetCompletionPrefix"]}`\n"
+  result << """```objc
 #{snippet["IDECodeSnippetContents"]}
 ```
 """
-  puts ""
 end
 
+File.open("catalog.md", "w") do |f|
+  f.write(result)
+end
   
