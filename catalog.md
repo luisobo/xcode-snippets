@@ -3,6 +3,26 @@ Prefix: `bself`
 ```objc
 __block __typeof__(self) blockSelf = self;
 ```
+##### Kiwi Should Eventually be No
+Prefix: `ssbn`
+```objc
+[[expectFutureValue(theValue(<#something#>)) shouldEventually] beNo];
+```
+##### Kiwi Should Eventually be Yes
+Prefix: `ssby`
+```objc
+[[expectFutureValue(theValue(<#something#>)) shouldEventually] beYes];
+```
+##### Kiwi Should be No
+Prefix: `sbn`
+```objc
+[[theValue(<#something#>) should] beNo];
+```
+##### Kiwi Should be Yes
+Prefix: `sby`
+```objc
+[[theValue(<#something#>) should] beYes];
+```
 ##### Kiwi before each
 Prefix: `bef`
 ```objc
@@ -39,7 +59,7 @@ Prefix: `seq`
 ##### Kiwi should eventually equal
 Prefix: `sseq`
 ```objc
-[expectFutureValue(<#futureValue#>) shouldEventually] equal:<#(id)#>];
+[[expectFutureValue(<#futureValue#>) shouldEventually] equal:<#(id)#>];
 ```
 ##### Kiwi stub and return
 Prefix: `snr`
