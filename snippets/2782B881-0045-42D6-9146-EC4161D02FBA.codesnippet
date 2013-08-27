@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[expectFutureValue(&lt;#futureValue#&gt;) shouldEventually] equal:&lt;#(id)#&gt;];</string>
+	<string>[[expectFutureValue(&lt;#futureValue#&gt;) shouldEventually] equal:&lt;#(id)#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2782B881-0045-42D6-9146-EC4161D02FBA</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -19,6 +19,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
