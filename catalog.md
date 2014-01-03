@@ -1,7 +1,17 @@
+##### Array literal
+Prefix: ``
+```objc
+@[<#objects, ...#>]
+```
 ##### Block self
 Prefix: `bself`
 ```objc
 __block __typeof__(self) blockSelf = self;
+```
+##### Dictionary literal
+Prefix: `d`
+```objc
+@{<#key#>: <#object, ...#>}
 ```
 ##### Kiwi Should Eventually be No
 Prefix: `ssbn`
