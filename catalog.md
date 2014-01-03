@@ -1,5 +1,5 @@
 ##### Array literal
-Prefix: ``
+Prefix: `a`
 ```objc
 @[<#objects, ...#>]
 ```
