@@ -11,7 +11,8 @@
 	<key>IDECodeSnippetContents</key>
 	<string>beforeEach(^{
     &lt;##&gt;
-});</string>
+});
+&lt;##&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A6FD843E-755F-43BD-95F4-5A986647D692</string>
 	<key>IDECodeSnippetLanguage</key>
