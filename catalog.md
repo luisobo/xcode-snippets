@@ -23,12 +23,23 @@ Prefix: `sby`
 ```objc
 [[theValue(<#something#>) should] beYes];
 ```
+##### Kiwi async test
+Prefix: `async`
+```objc
+        __block BOOL done = NO;
+
+        <#your async code here#>
+
+        [[expectFutureValue(theValue(done)) shouldEventually] beYes];
+        <#your expectaction here#>
+```
 ##### Kiwi before each
 Prefix: `bef`
 ```objc
 beforeEach(^{
     <##>
 });
+<##>
 ```
 ##### Kiwi context
 Prefix: `con`
@@ -75,6 +86,11 @@ Prefix: `snra`
 Prefix: `tv`
 ```objc
 theValue(<#expr#>)
+```
+##### Objc String Literal
+Prefix: `s`
+```objc
+@"<#something#>"
 ```
 ##### Weak self
 Prefix: `wself`
